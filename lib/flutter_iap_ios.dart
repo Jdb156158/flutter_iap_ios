@@ -11,4 +11,11 @@ class FlutterIapIos {
     final String version = await _channel.invokeMethod('getPlatformVersion');
     return version;
   }
+
+  static Future<bool> initProducts ({
+    var list,
+  }) async {
+    final bool ret = await _channel.invokeMethod('initProducts',list);
+    return ret;
+  }
 }

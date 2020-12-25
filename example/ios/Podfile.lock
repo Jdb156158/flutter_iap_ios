@@ -1,11 +1,41 @@
 PODS:
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
   - Flutter (1.0.0)
   - flutter_iap_ios (0.0.1):
     - Flutter
+    - IAP
+    - MBProgressHUD
+    - UICKeyChainStore
+  - IAP (1.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - IAP/IAPDelegateTempate (= 1.2.5)
+    - IAP/openssl (= 1.2.5)
+    - SystemServices
+  - IAP/IAPDelegateTempate (1.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - SystemServices
+  - IAP/openssl (1.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - SystemServices
+  - MBProgressHUD (1.2.0)
+  - SystemServices (2.0.1)
+  - UICKeyChainStore (2.2.1)
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - flutter_iap_ios (from `.symlinks/plugins/flutter_iap_ios/ios`)
+
+SPEC REPOS:
+  trunk:
+    - BlocksKit
+    - IAP
+    - MBProgressHUD
+    - SystemServices
+    - UICKeyChainStore
 
 EXTERNAL SOURCES:
   Flutter:
@@ -14,8 +44,13 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_iap_ios/ios"
 
 SPEC CHECKSUMS:
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_iap_ios: 178988ba4d145d5228628af0e37574842a5bdb41
+  flutter_iap_ios: a04cc3811045635e66c39908a508b152872bf1aa
+  IAP: b5d25b89ddff318064c2a4b821c4ffe1b1a38bfc
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  SystemServices: 7af348493ece8951449b476c41532df72569b181
+  UICKeyChainStore: ba3bff2c762b12db1e516f395c837dd25298b05e
 
 PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
 
