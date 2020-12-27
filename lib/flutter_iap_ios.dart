@@ -19,6 +19,11 @@ class FlutterIapIos {
     return ret;
   }
 
+  static Future<bool> hasSubscribe()  async {
+    final bool ret = await _channel.invokeMethod('hasSubscribe');
+    return ret;
+  }
+
   static Future<bool> initRestore()  async {
     final bool ret = await _channel.invokeMethod('initRestore');
     return ret;
@@ -28,4 +33,5 @@ class FlutterIapIos {
     final bool ret = await _channel.invokeMethod('payProductId',productId);
     return ret;
   }
+
 }

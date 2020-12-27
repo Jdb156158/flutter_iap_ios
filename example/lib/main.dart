@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   String _subscribeState = '当前未购买任何订阅型商品';
 
   bool _isHaveData;
-  List _iosResultsList;
+  List _iosResultsList = [{'title' : '0000','desc' : '1111','productId' : '2222'}];
 
   @override
   void initState() {
@@ -57,11 +57,28 @@ class _MyAppState extends State<MyApp> {
     iosResultsList =  await FlutterIapIos.initProducts(list: list);
     if(iosResultsList.length>0){
       setState(() {
+        print("========initProducts=======setState");
         _iosResultsList = iosResultsList;
         _isHaveData = true;
+        //商品列表初始化完成后在验证是否有购买订阅类产品，是否在有效期内
+        checkHasSubscribe();
       });
     }
 
+  }
+
+  Future<void> checkHasSubscribe() async {
+    bool ret = await FlutterIapIos.hasSubscribe();
+    if(ret){
+      setState(() {
+        _subscribeState = '当前已经购买订阅型商品，并且在有效期内';
+      });
+    }else{
+      setState(() {
+
+        _subscribeState = '当前未购买任何订阅型商品或购买的订阅商品已过期';
+      });
+    }
   }
 
 

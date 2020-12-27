@@ -25,19 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85d54dbc-94d3-4e2f-bea7-68162702ae4f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/flutter_iap_ios.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Classes/FlutterIapIosPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/FlutterIapIosPlugin.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Classes/IAPDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/IAPDelegate.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/flutter_iap_ios.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_iap_ios.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,22 +87,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1334" height="266" key="GridCell.Tab.0.bottom" timestamp="1609068841217">
+    <state width="1332" height="302" key="GridCell.Tab.0.bottom" timestamp="1609078872129">
       <screen x="42" y="25" width="1398" height="875" />
     </state>
-    <state width="1334" height="266" key="GridCell.Tab.0.bottom/42.25.1398.875@42.25.1398.875" timestamp="1609068841217" />
-    <state width="1334" height="266" key="GridCell.Tab.0.center" timestamp="1609068841216">
+    <state width="1332" height="302" key="GridCell.Tab.0.bottom/42.25.1398.875@42.25.1398.875" timestamp="1609078872129" />
+    <state width="1332" height="302" key="GridCell.Tab.0.center" timestamp="1609078872128">
       <screen x="42" y="25" width="1398" height="875" />
     </state>
-    <state width="1334" height="266" key="GridCell.Tab.0.center/42.25.1398.875@42.25.1398.875" timestamp="1609068841216" />
-    <state width="1334" height="266" key="GridCell.Tab.0.left" timestamp="1609068841216">
+    <state width="1332" height="302" key="GridCell.Tab.0.center/42.25.1398.875@42.25.1398.875" timestamp="1609078872128" />
+    <state width="1332" height="302" key="GridCell.Tab.0.left" timestamp="1609078872128">
       <screen x="42" y="25" width="1398" height="875" />
     </state>
-    <state width="1334" height="266" key="GridCell.Tab.0.left/42.25.1398.875@42.25.1398.875" timestamp="1609068841216" />
-    <state width="1334" height="266" key="GridCell.Tab.0.right" timestamp="1609068841216">
+    <state width="1332" height="302" key="GridCell.Tab.0.left/42.25.1398.875@42.25.1398.875" timestamp="1609078872128" />
+    <state width="1332" height="302" key="GridCell.Tab.0.right" timestamp="1609078872129">
       <screen x="42" y="25" width="1398" height="875" />
     </state>
-    <state width="1334" height="266" key="GridCell.Tab.0.right/42.25.1398.875@42.25.1398.875" timestamp="1609068841216" />
+    <state width="1332" height="302" key="GridCell.Tab.0.right/42.25.1398.875@42.25.1398.875" timestamp="1609078872129" />
     <state x="340" y="229" key="IDE.errors.dialog" timestamp="1609044959305">
       <screen x="42" y="25" width="1398" height="875" />
     </state>

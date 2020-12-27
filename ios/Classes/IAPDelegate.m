@@ -122,12 +122,11 @@
     else {
         if (productIdentifiers.count > 0) {
             [HudManager showWord:@"恢复成功!"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kIAPDelegateRestored object:nil userInfo:@{@"obj": productIdentifiers}];
+            [self saveAllProducts:productIdentifiers];
         } else {
             [HudManager showWord:@"没有可恢复的商品"];
         }
-        
-        [self saveAllProducts:productIdentifiers];
-        [[NSNotificationCenter defaultCenter] postNotificationName:kIAPDelegateRestored object:nil userInfo:@{@"obj": productIdentifiers}];
     }
 }
 
@@ -139,8 +138,14 @@
     }
     // 成功过后要对所有商品进行保存， 无论是否为空
     else {
-        [self saveAllProducts:productIdentifiers];
+        
+        if (productIdentifiers.count > 0) {
+            [self saveAllProducts:productIdentifiers];
+            
+        }
+        
         [[NSNotificationCenter defaultCenter] postNotificationName:kIAPDelegateChecked object:nil userInfo:@{@"obj": productIdentifiers}];
+        
     }
 }
 
@@ -164,7 +169,10 @@
 }
 
 - (void)saveAllProducts:(NSSet *)productIdentifiers {
+    
     [[UICKeyChainStore keyChainStoreWithService:KeyChainIAPService] setString:[[productIdentifiers allObjects] componentsJoinedByString:@"----"] forKey:KeyChainAllProductKey];
+    
+    NSLog(@"saveAllProducts=======productIdentifiers:%@",productIdentifiers);
     
     if (productIdentifiers.count>0) {
         [USERDEFAULTS setBool:true forKey:SUBSCIBE_SUCCESS];
