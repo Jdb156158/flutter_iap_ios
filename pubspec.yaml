@@ -1,8 +1,8 @@
 name: flutter_iap_ios
 description: A new Flutter plugin.
 version: 0.0.1
-author:
-homepage:
+author: "jiabingbing@adesk.com"
+homepage: "https://github.com/Jdb156158/flutter_iap_ios.git"
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
