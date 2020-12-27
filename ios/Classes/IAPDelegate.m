@@ -38,7 +38,7 @@
     [self.iap getProductsInfo:[NSSet setWithArray:Products] success:^(NSArray<SKProduct *> *products, NSSet<NSString *> *invalidProductIdentifiers) {
         NSMutableArray *dicArray = [[NSMutableArray alloc] init];
         for (SKProduct *p in products) {
-            NSDictionary *dict = @{@"productId":p.productIdentifier,@"price":p.price,@"title":p.localizedTitle,@"desc":[p description]};
+            NSDictionary *dict = @{@"productId":p.productIdentifier,@"price":p.price,@"title":p.localizedTitle,@"desc":[p localizedDescription]};
             [dicArray addObject:dict];
         }
         if (compelete) {
@@ -104,7 +104,7 @@
 
 - (void)paidFailedWithProductIdentifier:(NSString *)productIdentifier transaction:(SKPaymentTransaction *)transaction error:(NSError *)error {
     [self hideLoadingIfNeeded];
-
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:kIAPDelegateFailed object:nil userInfo:@{@"obj": productIdentifier}];
 }
 
@@ -116,7 +116,7 @@
             [HudManager showWord:@"恢复失败, 请稍后重试"];
         }
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:kIAPDelegateRestored object:nil userInfo:@{@"error": error}];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kIAPDelegateRestoredFailed object:nil userInfo:@{@"error": error}];
     }
     // 成功过后要对所有商品进行保存， 无论是否为空
     else {

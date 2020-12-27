@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define kIAPDelegateSuccess     @"kIAPDelegateSuccess"
 #define kIAPDelegateFailed      @"kIAPDelegateFailed"
 #define kIAPDelegateRestored    @"kIAPDelegateRestored"
+#define kIAPDelegateRestoredFailed    @"kIAPDelegateRestoredFailed"
 #define kIAPDelegateChecked     @"kIAPDelegateChecked"
 
 #define kObjKey                 @"obj"

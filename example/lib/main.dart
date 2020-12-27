@@ -16,12 +16,16 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
 
+  String _subscribeState = '当前未购买任何订阅型商品';
+
+  bool _isHaveData;
+  List _iosResultsList;
+
   @override
   void initState() {
     super.initState();
     initPlatformState();
-    var list = ['viptest','VipMonth'];
-    FlutterIapIos.initProducts(list: list);
+    initProducts();
   }
 
   // Platform messages are asynchronous, so we initialize in an async method.
@@ -44,6 +48,68 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  Future<void> initProducts() async {
+
+    var list = ['viptest','VipMonth'];
+
+    List iosResultsList;
+
+    iosResultsList =  await FlutterIapIos.initProducts(list: list);
+    if(iosResultsList.length>0){
+      setState(() {
+        _iosResultsList = iosResultsList;
+        _isHaveData = true;
+      });
+    }
+
+  }
+
+
+
+  Future<void> _restore() async {
+    bool ret =  await FlutterIapIos.initRestore();
+    if(ret){
+      setState(() {
+        _subscribeState = '恢复订阅购买成功！';
+      });
+    }else{
+      setState(() {
+        _subscribeState = '恢复订阅购买失败！';
+      });
+    }
+  }
+
+  Future<void>  _buyProductId(String productId) async {
+    print(productId);
+    bool ret =  await FlutterIapIos.payProductId(productId: productId);
+    if(ret){
+      setState(() {
+        _subscribeState = '订阅购买成功！';
+      });
+    }else{
+      setState(() {
+        _subscribeState = '订阅购买失败！';
+      });
+    }
+  }
+
+
+  List<Widget> _MyBody() {
+    var list = _iosResultsList.map((value) {
+      return ListTile(
+        title: Text(value["title"]),
+        subtitle:Text(value["desc"]) ,
+        trailing : Icon(Icons.arrow_forward_ios),
+        leading: Icon(Icons.account_balance_wallet_outlined),
+        onTap: (){
+          _buyProductId(value["productId"]);
+        },
+      );
+
+    });
+    return list.toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -54,11 +120,22 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Column (
             children: [
-              Text('Running on: $_platformVersion\n'),
-              // RaisedButton(
-              //   onPressed: selectLocalVideo,
-              //   child: Text("购买"),
-              // ),
+              SizedBox(
+                height: 50,
+              ),
+              Text('苹果用户内购状态: $_subscribeState\n'),
+              SizedBox(
+                height: 20,
+              ),
+              OutlineButton.icon(
+                icon: Icon(Icons.restore),
+                label: Text("恢复购买"),
+                onPressed: _restore,
+              ),
+              _isHaveData==false?Text('********暂时未获取到商品列表********'):Expanded(child: ListView(
+                children: this._MyBody(),
+              )),
+              //Text('Running on: $_platformVersion\n'),
             ],
           )
         ),
