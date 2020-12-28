@@ -80,7 +80,7 @@
             [HudManager showWord:[error localizedDescription]];
         }
     } else {
-        [HudManager showLoading];
+        //[HudManager showLoading];
         self.timeout = [NSTimer timerWithTimeInterval:60 target:self selector:@selector(timeoutFired:) userInfo:nil repeats:false];
     }
 }
@@ -105,12 +105,13 @@
 - (void)paidSuccessWithProductIdentifier:(NSString *)productIdentifier transaction:(SKPaymentTransaction *)transaction {
     [self hideLoadingIfNeeded];
     
+    /*
     SKProduct *product = [self.iap productForIdentifier:productIdentifier];
     if ([self typeForProduct:productIdentifier] == IAPProductTypeAutoRenewSubscription ) {
         [HudManager showWord:[NSString stringWithFormat:@"您已成功购买"]];
     } else {
         [HudManager showWord:[NSString stringWithFormat:@"购买成功! %@", product.localizedTitle]];
-    }
+    }*/
     
     [self addProduct:productIdentifier];
     
