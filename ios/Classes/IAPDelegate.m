@@ -35,10 +35,25 @@
 
 - (void)fetchAllProducts:(NSArray *)Products compelete:(void(^)(NSArray * newProductsArray))compelete{
     
+    NSArray *unitDescArray = @[@"天",
+                               @"周",
+                               @"月",
+                               @"年"];
+    
     [self.iap getProductsInfo:[NSSet setWithArray:Products] success:^(NSArray<SKProduct *> *products, NSSet<NSString *> *invalidProductIdentifiers) {
         NSMutableArray *dicArray = [[NSMutableArray alloc] init];
         for (SKProduct *p in products) {
-            NSDictionary *dict = @{@"productId":p.productIdentifier,@"price":p.price,@"title":p.localizedTitle,@"desc":[p localizedDescription]};
+            
+            NSString *subscribePriceStr = [[[IAPDelegate shared] iap] priceStringForProduct:p];
+            NSString *numberOfTrialUnitsStr = @"";
+            NSString *trialUnitStr = @"";
+            if (@available(iOS 11.2, *)) {
+                numberOfTrialUnitsStr = [@(p.introductoryPrice.subscriptionPeriod.numberOfUnits) stringValue];
+            }
+            if (@available(iOS 11.2, *)) {
+                trialUnitStr = unitDescArray[p.introductoryPrice.subscriptionPeriod.unit];
+            }
+            NSDictionary *dict = @{@"productId":p.productIdentifier,@"price":p.price,@"priceLocale":subscribePriceStr,@"title":p.localizedTitle,@"desc":[p localizedDescription],@"numberOfTrialUnitsStr":numberOfTrialUnitsStr,@"trialUnitStr":trialUnitStr};
             [dicArray addObject:dict];
         }
         if (compelete) {
