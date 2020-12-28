@@ -5,6 +5,7 @@
 #define kIAPDelegateSuccess     @"kIAPDelegateSuccess"
 #define kIAPDelegateFailed      @"kIAPDelegateFailed"
 #define kIAPDelegateRestored    @"kIAPDelegateRestored"
+#define kIAPDelegateRestoredFailed    @"kIAPDelegateRestoredFailed"
 #define kIAPDelegateChecked     @"kIAPDelegateChecked"
 
 
@@ -68,6 +69,12 @@
       [[NSNotificationCenter defaultCenter] addObserverForName:kIAPDelegateRestored object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
           NSLog(@"恢复购买成功!");
           result(@(YES));
+      }];
+      
+      //
+      [[NSNotificationCenter defaultCenter] addObserverForName:kIAPDelegateRestoredFailed object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+          NSLog(@"恢复购买失败!");
+          result(@(NO));
       }];
       
       //恢复购买

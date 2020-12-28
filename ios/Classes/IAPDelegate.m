@@ -90,7 +90,7 @@
 }
 
 - (void)restore {
-    [HudManager showLoading];
+    //[HudManager showLoading];
     [self.iap restoreAllPurchasedProductExceptConsumable];
 }
 
@@ -128,21 +128,23 @@
     [self hideLoadingIfNeeded];
     
     if (error) {
+        /*
         if (error.code == IAPErrorCanNotFindReceipt) {
             [HudManager showWord:@"恢复失败, 请稍后重试"];
-        }
+        }*/
         
         [[NSNotificationCenter defaultCenter] postNotificationName:kIAPDelegateRestoredFailed object:nil userInfo:@{@"error": error}];
     }
     // 成功过后要对所有商品进行保存， 无论是否为空
     else {
         if (productIdentifiers.count > 0) {
-            [HudManager showWord:@"恢复成功!"];
+            //[HudManager showWord:@"恢复成功!"];
             [[NSNotificationCenter defaultCenter] postNotificationName:kIAPDelegateRestored object:nil userInfo:@{@"obj": productIdentifiers}];
-            [self saveAllProducts:productIdentifiers];
         } else {
-            [HudManager showWord:@"没有可恢复的商品"];
+            //[HudManager showWord:@"没有可恢复的商品"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kIAPDelegateRestoredFailed object:nil userInfo:nil];
         }
+        [self saveAllProducts:productIdentifiers];
     }
 }
 
