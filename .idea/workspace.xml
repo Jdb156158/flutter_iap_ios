@@ -25,7 +25,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85d54dbc-94d3-4e2f-bea7-68162702ae4f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Classes/IAPDelegate.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/IAPDelegate.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +50,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Flutter.example/lib/main.dart">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
       <method v="2" />
@@ -75,37 +81,43 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1332" height="360" key="GridCell.Tab.0.bottom" timestamp="1609079216197">
-      <screen x="42" y="25" width="1398" height="875" />
+    <state width="1669" height="468" key="GridCell.Tab.0.bottom" timestamp="1609123353702">
+      <screen x="37" y="23" width="1883" height="1057" />
     </state>
+    <state width="1669" height="468" key="GridCell.Tab.0.bottom/37.23.1883.1057@37.23.1883.1057" timestamp="1609123353702" />
     <state width="1332" height="360" key="GridCell.Tab.0.bottom/42.25.1398.875@42.25.1398.875" timestamp="1609079216197" />
-    <state width="1332" height="360" key="GridCell.Tab.0.center" timestamp="1609079216196">
-      <screen x="42" y="25" width="1398" height="875" />
+    <state width="1669" height="468" key="GridCell.Tab.0.center" timestamp="1609123353701">
+      <screen x="37" y="23" width="1883" height="1057" />
     </state>
+    <state width="1669" height="468" key="GridCell.Tab.0.center/37.23.1883.1057@37.23.1883.1057" timestamp="1609123353701" />
     <state width="1332" height="360" key="GridCell.Tab.0.center/42.25.1398.875@42.25.1398.875" timestamp="1609079216196" />
-    <state width="1332" height="360" key="GridCell.Tab.0.left" timestamp="1609079216195">
-      <screen x="42" y="25" width="1398" height="875" />
+    <state width="1669" height="468" key="GridCell.Tab.0.left" timestamp="1609123353701">
+      <screen x="37" y="23" width="1883" height="1057" />
     </state>
+    <state width="1669" height="468" key="GridCell.Tab.0.left/37.23.1883.1057@37.23.1883.1057" timestamp="1609123353701" />
     <state width="1332" height="360" key="GridCell.Tab.0.left/42.25.1398.875@42.25.1398.875" timestamp="1609079216195" />
-    <state width="1332" height="360" key="GridCell.Tab.0.right" timestamp="1609079216196">
-      <screen x="42" y="25" width="1398" height="875" />
+    <state width="1669" height="468" key="GridCell.Tab.0.right" timestamp="1609123353702">
+      <screen x="37" y="23" width="1883" height="1057" />
     </state>
+    <state width="1669" height="468" key="GridCell.Tab.0.right/37.23.1883.1057@37.23.1883.1057" timestamp="1609123353702" />
     <state width="1332" height="360" key="GridCell.Tab.0.right/42.25.1398.875@42.25.1398.875" timestamp="1609079216196" />
     <state x="340" y="229" key="IDE.errors.dialog" timestamp="1609044959305">
       <screen x="42" y="25" width="1398" height="875" />
     </state>
     <state x="340" y="229" key="IDE.errors.dialog/42.25.1398.875@42.25.1398.875" timestamp="1609044959305" />
-    <state x="243" y="98" key="SettingsEditor" timestamp="1608993915838">
-      <screen x="43" y="25" width="1397" height="875" />
+    <state x="680" y="249" key="SettingsEditor" timestamp="1609120470837">
+      <screen x="37" y="23" width="1883" height="1057" />
     </state>
+    <state x="680" y="249" key="SettingsEditor/37.23.1883.1057@37.23.1883.1057" timestamp="1609120470837" />
     <state x="243" y="98" key="SettingsEditor/43.25.1397.875@43.25.1397.875" timestamp="1608993915838" />
   </component>
 </project>

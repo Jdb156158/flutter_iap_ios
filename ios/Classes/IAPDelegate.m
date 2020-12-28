@@ -139,10 +139,7 @@
     // 成功过后要对所有商品进行保存， 无论是否为空
     else {
         
-        if (productIdentifiers.count > 0) {
-            [self saveAllProducts:productIdentifiers];
-            
-        }
+        [self saveAllProducts:productIdentifiers];
         
         [[NSNotificationCenter defaultCenter] postNotificationName:kIAPDelegateChecked object:nil userInfo:@{@"obj": productIdentifiers}];
         
