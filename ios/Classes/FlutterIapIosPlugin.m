@@ -50,16 +50,18 @@
           NSLog(@"=====初始化商品的详细信息:%@======",newProductsArray);
           if (newProductsArray.count>0) {
               
-              //result(newProductsArray);
+              result(newProductsArray);
               
-              // 注册恢复购买结果通知
-              [[NSNotificationCenter defaultCenter] addObserverForName:kIAPDelegateChecked object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-                  NSLog(@"=====kIAPDelegateChecked完成校验工作======");
-                  result(newProductsArray);
-              }];
+//              // 注册恢复购买结果通知
+//              [[NSNotificationCenter defaultCenter] addObserverForName:kIAPDelegateChecked object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+//                  NSLog(@"=====kIAPDelegateChecked完成校验工作======");
+//                  result(newProductsArray);
+//              }];
               
               //检查一下订阅类型数据,对已有的receipt校验
               [[IAPDelegate shared] check];
+          }else{
+              result(newProductsArray);
           }
       }];
       

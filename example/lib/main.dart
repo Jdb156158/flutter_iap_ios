@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
 
   Future<void> initProducts() async {
 
-    var list = ['viptest','VipMonth'];
+    var list = ['vipmonth'];
 
     List iosResultsList;
 

@@ -116,4 +116,4 @@
 # 测试流程注意
 - 沙盒测试的时候，注意自动续费订阅的时效性
 
-<img src="./READMEIMAGE/Pasted Graphic.png" style="zoom:100%;" />
+<img src="./READMEIMAGE/PastedGraphic.png"/>
