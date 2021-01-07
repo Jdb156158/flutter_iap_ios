@@ -26,22 +26,8 @@
   <component name="ChangeListManager">
     <list default="true" id="85d54dbc-94d3-4e2f-bea7-68162702ae4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/FlutterIapIosPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/FlutterIapIosPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/HudManager.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/HudManager.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/IAPDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/IAPDelegate.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/flutter_iap_ios.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/flutter_iap_ios.podspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flutter_iap_ios.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_iap_ios.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
