@@ -19,8 +19,27 @@ class FlutterIapIos {
     return ret;
   }
 
+  static Future<bool> initAutoRenewSubscriptionProducts ({
+    var list,
+  }) async {
+    final bool ret = await _channel.invokeMethod('initAutoRenewSubscriptionProducts',list);
+    return ret;
+  }
+
+  static Future<bool> initForeverProducts ({
+    var list,
+  }) async {
+    final bool ret = await _channel.invokeMethod('initForeverProducts',list);
+    return ret;
+  }
+
   static Future<bool> hasSubscribe()  async {
     final bool ret = await _channel.invokeMethod('hasSubscribe');
+    return ret;
+  }
+
+  static Future<bool> hasForever()  async {
+    final bool ret = await _channel.invokeMethod('hasForever');
     return ret;
   }
 

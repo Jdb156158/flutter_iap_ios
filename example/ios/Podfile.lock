@@ -1,28 +1,36 @@
 PODS:
-  - BlocksKit/Core (2.2.5)
-  - BlocksKit/DynamicDelegate (2.2.5)
   - Flutter (1.0.0)
-  - flutter_iap_ios (0.0.1):
+  - flutter_iap_ios (0.0.6):
     - Flutter
-    - IAP
-    - MBProgressHUD
+    - NOVIAP
+    - NOVUtilities
     - UICKeyChainStore
-  - IAP (1.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
-    - IAP/IAPDelegateTempate (= 1.2.5)
-    - IAP/openssl (= 1.2.5)
-    - SystemServices
-  - IAP/IAPDelegateTempate (1.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
-    - SystemServices
-  - IAP/openssl (1.2.5):
-    - BlocksKit/Core
-    - BlocksKit/DynamicDelegate
-    - SystemServices
-  - MBProgressHUD (1.2.0)
-  - SystemServices (2.0.1)
+  - NOVIAP (4.0.0):
+    - NOVIAP/Core (= 4.0.0)
+    - NOVIAP/LocalReceiptValidator (= 4.0.0)
+    - NOVIAP/openssl (= 4.0.0)
+    - NOVIAP/UserDefaultProductStore (= 4.0.0)
+  - NOVIAP/Core (4.0.0):
+    - NOVUtilities
+  - NOVIAP/LocalReceiptValidator (4.0.0):
+    - NOVIAP/Core
+    - NOVIAP/openssl
+    - NOVUtilities
+  - NOVIAP/openssl (4.0.0)
+  - NOVIAP/UserDefaultProductStore (4.0.0):
+    - NOVIAP/Core
+    - NOVUtilities
+  - NOVUtilities (4.0.0):
+    - NOVUtilities/Defines (= 4.0.0)
+    - NOVUtilities/Foundation-Categories (= 4.0.0)
+    - NOVUtilities/Objc-Utilities (= 4.0.0)
+    - NOVUtilities/YYUtilities (= 4.0.0)
+  - NOVUtilities/Defines (4.0.0):
+    - NOVUtilities/Foundation-Categories
+  - NOVUtilities/Foundation-Categories (4.0.0)
+  - NOVUtilities/Objc-Utilities (4.0.0)
+  - NOVUtilities/YYUtilities (4.0.0):
+    - NOVUtilities/Defines
   - UICKeyChainStore (2.2.1)
 
 DEPENDENCIES:
@@ -30,11 +38,10 @@ DEPENDENCIES:
   - flutter_iap_ios (from `.symlinks/plugins/flutter_iap_ios/ios`)
 
 SPEC REPOS:
+  https://gitlab.com/novapps/ios-app/framework/private-cocoapods-spec-repo.git:
+    - NOVIAP
+    - NOVUtilities
   trunk:
-    - BlocksKit
-    - IAP
-    - MBProgressHUD
-    - SystemServices
     - UICKeyChainStore
 
 EXTERNAL SOURCES:
@@ -44,14 +51,12 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/flutter_iap_ios/ios"
 
 SPEC CHECKSUMS:
-  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  flutter_iap_ios: a04cc3811045635e66c39908a508b152872bf1aa
-  IAP: b5d25b89ddff318064c2a4b821c4ffe1b1a38bfc
-  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  SystemServices: 7af348493ece8951449b476c41532df72569b181
+  flutter_iap_ios: 5e7c769f3129d234bc92825a02a44c155cde6adc
+  NOVIAP: 2ace93480732c56d1b66338c008d958f0290c368
+  NOVUtilities: 4dbcf8564b81233b47b65ef7a6beba33f54c3552
   UICKeyChainStore: ba3bff2c762b12db1e516f395c837dd25298b05e
 
-PODFILE CHECKSUM: 3ebbad4ce84cc18a96a502dff189b55b54d10f72
+PODFILE CHECKSUM: 6dc92a1065174d3eaa755697d9ea6c28ac9c4c1d
 
 COCOAPODS: 1.10.0

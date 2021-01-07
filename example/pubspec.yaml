@@ -1,6 +1,6 @@
 name: flutter_iap_ios_example
 description: Demonstrates how to use the flutter_iap_ios plugin.
-version: 0.0.5
+version: 0.0.6
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.

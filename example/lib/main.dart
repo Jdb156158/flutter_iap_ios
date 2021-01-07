@@ -25,6 +25,7 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     initPlatformState();
+    initCategoryProducts();
     initProducts();
   }
 
@@ -48,9 +49,24 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  Future<void> initCategoryProducts()  async {
+
+    //续费订阅类产品
+    var subscriptionList = ['VipMonth'];
+    //非消耗型（永久类）产品
+    var foreverList = [];
+
+    //初始化订阅类产品
+    FlutterIapIos.initAutoRenewSubscriptionProducts(list: subscriptionList);
+    //初始化非消耗型（永久类）产品
+    FlutterIapIos.initForeverProducts(list: foreverList);
+
+  }
+
   Future<void> initProducts() async {
 
-    var list = ['vipmonth'];
+    //所有商品
+    var list = ['VipMonth','viptest'];
 
     List iosResultsList;
 
@@ -62,6 +78,8 @@ class _MyAppState extends State<MyApp> {
         _isHaveData = true;
         //商品列表初始化完成后在验证是否有购买订阅类产品，是否在有效期内
         checkHasSubscribe();
+        //查看用户是否有购买过非消耗永久类商品信息
+        checkHasForever();
       });
     }
 
@@ -81,7 +99,14 @@ class _MyAppState extends State<MyApp> {
     }
   }
 
-
+  Future<void> checkHasForever() async {
+    bool ret = await FlutterIapIos.hasForever();
+    if(ret){
+      print("购买过永久性商品信息");
+    }else{
+      print("未购买过永久性商品信息");
+    }
+  }
 
   Future<void> _restore() async {
     bool ret =  await FlutterIapIos.initRestore();

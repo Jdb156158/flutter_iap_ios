@@ -5,6 +5,7 @@ ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
 platform :ios, '11.0'
 source "https://cdn.cocoapods.org/"
+source "https://gitlab.com/novapps/ios-app/framework/private-cocoapods-spec-repo.git"
 
 project 'Runner', {
   'Debug' => :debug,
