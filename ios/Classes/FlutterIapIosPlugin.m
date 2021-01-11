@@ -59,17 +59,15 @@
         for (SKProduct *p in [NOVAIAP shared].products) {
             
             //NSLog(@"[商品ID：%@,商品标题：%@,商品描述：%@,商品价格：%@]",[p productIdentifier],[p localizedTitle],[p localizedDescription],[p price]);
-            if (p!=nil) {
+            if (p!=nil && ![p isEqual:[NSNull null]]) {
                 NSString *subscribePriceStr = [self priceStringForProduct:p];
                 NSString *numberOfTrialUnitsStr = @"";
                 NSString *trialUnitStr = @"";
                 if (@available(iOS 11.2, *)) {
                     numberOfTrialUnitsStr = [@(p.introductoryPrice.subscriptionPeriod.numberOfUnits) stringValue];
-                }
-                if (@available(iOS 11.2, *)) {
                     trialUnitStr = unitDescArray[p.introductoryPrice.subscriptionPeriod.unit];
                 }
-                NSDictionary *dict = @{@"productId":p.productIdentifier,@"price":p.price,@"priceLocale":subscribePriceStr,@"title":p.localizedTitle,@"desc":[p localizedDescription],@"numberOfTrialUnitsStr":numberOfTrialUnitsStr,@"trialUnitStr":trialUnitStr};
+                NSDictionary *dict = @{@"productId":[self safeString:p.productIdentifier],@"price":p.price,@"priceLocale":[self safeString:subscribePriceStr],@"title":[self safeString:p.localizedTitle],@"desc":[self safeString:[p localizedDescription]],@"numberOfTrialUnitsStr":[self safeString:numberOfTrialUnitsStr],@"trialUnitStr":[self safeString:trialUnitStr]};
                 [dicArray addObject:dict];
             }
         }
@@ -332,6 +330,14 @@
     [numberFormatter setLocale:product.priceLocale];
     NSString *formattedPrice = [numberFormatter stringFromNumber:product.price];
     return formattedPrice;
+}
+
+- (NSString *)safeString:(NSString *)str{
+    if (str == nil || str.length == 0) {
+        return  @"";
+    }else{
+        return  str;
+    }
 }
 
 @end

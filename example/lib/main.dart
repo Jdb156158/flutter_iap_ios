@@ -54,7 +54,7 @@ class _MyAppState extends State<MyApp> {
     //续费订阅类产品
     var subscriptionList = ['VipMonth'];
     //非消耗型（永久类）产品
-    var foreverList = [];
+    var foreverList = ['viptest'];
 
     //初始化订阅类产品
     FlutterIapIos.initAutoRenewSubscriptionProducts(list: subscriptionList);

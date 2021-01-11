@@ -27,6 +27,8 @@
     <list default="true" id="85d54dbc-94d3-4e2f-bea7-68162702ae4f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Classes/FlutterIapIosPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/FlutterIapIosPlugin.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/flutter_iap_ios.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/flutter_iap_ios.podspec" afterDir="false" />
